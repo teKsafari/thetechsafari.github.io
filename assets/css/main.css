@@ -3458,7 +3458,7 @@ input, select, textarea {
 		min-height: 100vh;
 		position: relative;
 		text-align: center;
-		z-index: 21;
+		z-index: 5;
 	}
 
 		#banner:before {
@@ -3516,12 +3516,15 @@ input, select, textarea {
 				margin-left: 3em;
 				vertical-align: middle;
 				width: 18em;
+				
+				
 			}
 
 				#banner .content .image img {
 					border-radius: 100%;
 					display: block;
 					width: 100%;
+					
 				}
 
 	body.is-touch #banner {
