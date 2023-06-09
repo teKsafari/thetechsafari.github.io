@@ -748,7 +748,7 @@
 		position: relative;
 		overflow: hidden;
 		&.post-image{
-			max-height:350px;
+			max-height:400px;
 			background-position: bottom !important;
 		}
 		&:before {
@@ -799,7 +799,52 @@
 			}
 		}
 	}
+	.accordition{
+		display: grid;
+		overflow: hidden;
+		cursor: pointer;
+		margin-bottom: 2em;
+		&::-webkit-scrollbar{
+			width: .5em;
+		}
+		&::-webkit-scrollbar-track{
+			background: _palette(accent2);
+		}
+		&::-webkit-scrollbar-thumb{
+			background: _palette(accent1);
+			margin:5px;
+			border-radius: 1000px;
+		}
+		&.in{
+			transition: grid-template-rows 100ms;
+			grid-template-rows: 0fr;
+			margin: 0;
+			&.active{
+				grid-template-rows: 1fr;
+				max-height: 380px;
+				&.scroll{
+					padding-right: .5em;
+					overflow-y: scroll;
+					margin-bottom: 2em;
+				}
+			}
+		}
+		&.out{
+			grid-template-rows: 1fr;
+			&.active{
+				grid-template-rows: 0fr;
+				margin: 0;
+			}
+		}
+		p{
+			min-height: 0;
+			margin: 0;
+		}
+	}
+	.description{
+		min-height: 0;
 
+	}
 /* List */
 
 	ol {

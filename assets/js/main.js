@@ -248,3 +248,5 @@
 			._parallax();
 
 })(jQuery);
+
+[...document.querySelectorAll(".accordition-container")].map(wrapper=>wrapper.onclick=()=>[...wrapper.children].map(el=>el.classList.toggle("active")));

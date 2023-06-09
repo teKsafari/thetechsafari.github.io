@@ -2051,7 +2051,7 @@ input[type=radio] + label:before {
   overflow: hidden;
 }
 .image.post-image {
-  max-height: 350px;
+  max-height: 400px;
   background-position: bottom !important;
 }
 .image:before {
@@ -2092,6 +2092,53 @@ input[type=radio] + label:before {
 }
 .image.fit img {
   width: 100%;
+}
+
+.accordition {
+  display: grid;
+  overflow: hidden;
+  cursor: pointer;
+  margin-bottom: 2em;
+}
+.accordition::-webkit-scrollbar {
+  width: 0.5em;
+}
+.accordition::-webkit-scrollbar-track {
+  background: #272833;
+}
+.accordition::-webkit-scrollbar-thumb {
+  background: #e44c65;
+  margin: 5px;
+  border-radius: 1000px;
+}
+.accordition.in {
+  transition: grid-template-rows 100ms;
+  grid-template-rows: 0fr;
+  margin: 0;
+}
+.accordition.in.active {
+  grid-template-rows: 1fr;
+  max-height: 380px;
+}
+.accordition.in.active.scroll {
+  padding-right: 0.5em;
+  overflow-y: scroll;
+  margin-bottom: 2em;
+}
+.accordition.out {
+  grid-template-rows: 1fr;
+}
+.accordition.out.active {
+  grid-template-rows: 0fr;
+  margin: 0;
+}
+.accordition p {
+  min-height: 0;
+  margin: 0;
+}
+
+.description {
+  min-height: 0;
 }
 
 /* List */
