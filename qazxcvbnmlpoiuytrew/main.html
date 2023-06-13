@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>past events</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+<link rel="manifest" href="favicon_io/site.webmanifest">
+  <style>
+    /* CSS for the card layout */
+    .cards {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    
+    .header a {
+    color: azure;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.header a:hover {
+    color: rgb(175, 97, 97);
+    transform: scale(1.1);
+}
+
+.header {
+    height: 65px;
+    width: 100%;
+    background-color: grey;
+    display: flex;
+    justify-content: space-between;
+    cursor: default;
+    font-size: 1em;
+}
+
+.p1 {
+    color: white;
+    font-size: 12px;
+}
+
+.p2 {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.p3,
+.p4 {
+    font-size: 12px;
+    margin: 5px;
+    font-family: Arial, sans-serif;
+    font-weight: 300;
+}
+
+    .second{
+        color: black;
+        font-size: 17px;
+        width: 100%;
+        text-align: center;
+        height: 40px;
+        font-weight: bold;
+    }
+.card {
+  width: 450px;
+  height: 350px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__image {
+  background-image: url("/pics/cv.png");
+  background-size: cover;
+  flex-grow: 1;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.card__image:hover {
+      transform: scale(1.1);
+    }
+    .card__image:hover .card__button {
+      display: block;
+    }
+
+.card__image1 {
+  background-image: url("/pics/pic01.jpg");
+  background-size: cover;
+  flex-grow: 1;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.card__image1:hover {
+      transform: scale(1.1);
+    }
+    .card__image1:hover .card__button {
+      display: block;
+    }
+
+.card__image2 {
+  background-image: url("/pics/social.jpg");
+  background-size: cover;
+  flex-grow: 1;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.card__image2:hover {
+      transform: scale(1.1);
+    }
+    .card__image2:hover .card__button {
+      display: block;
+    }
+
+.card__image3 {
+  background-image: url("/pics/hand-holding-letter-5.jpg");
+  background-size: cover;
+  flex-grow: 1;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.card__image3:hover {
+      transform: scale(1.1);
+    }
+    .card__image3:hover .card__button {
+      display: block;
+    }
+
+.card__image4 {
+  background-image: url("/pics/6864937_23324.jpg");
+  background-size: cover;
+  flex-grow: 1;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.card__image4:hover {
+      transform: scale(1.1);
+    }
+    .card__image4:hover .card__button {
+      display: block;
+    }
+
+.card__image5 {
+  background-image: url("/pics/18493598_5994421.jpg");
+  background-size: cover;
+  flex-grow: 1;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.card__image5:hover {
+      transform: scale(1.1);
+    }
+    .card__image5:hover .card__button {
+      display: block;
+    }
+
+.card__image6 {
+  background-image: url("/pics/decorative-table-with-frame.jpg");
+  background-size: cover;
+  flex-grow: 1;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.card__image6:hover {
+      transform: scale(1.1);
+    }
+
+    .card__button {
+      display: none;
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 8px 16px;
+      background-color: #f2f2f2;
+      border-radius: 4px;
+      transition: opacity 0.3s ease;
+    }
+
+    .card__image6:hover .card__button {
+      display: block;
+    }
+
+.card__content {
+  padding-top: 20px;
+}
+
+.card h2 {
+  margin-bottom: 10px;
+}
+
+.comment {
+  font-style: italic;
+  color: #999999;
+}
+
+.card__button {
+  display: none;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.card__button a {
+  color: grey;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.card__button a::before {
+  content: "\2764";
+  margin-right: 5px;
+}
+
+.l {
+  padding-top: 200px;
+}
+@media (max-width: 768px) {
+      .card {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        margin: 20px auto;
+      }
+      .card__image1,
+    .card__image3,
+    .card__image4,
+    .card__image5,
+    .card__image6,.card__image {
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 200px;
+    }
+    .card__image{
+        background-image: url("/pics/cv.png");
+    }
+    .card__image1 {
+        background-image: url("/pics/pic01.jpg");
+    }
+
+    .card__image3 {
+        background-image: url("/pics/hand-holding-letter-5.jpg");
+    }
+
+    .card__image4 {
+        background-image: url("/pics/6864937_23324.jpg");
+    }
+
+    .card__image5 {
+        background-image: url("/pics/18493598_5994421.jpg");
+    }
+
+    .card__image6 {
+        background-image: url("/pics/decorative-table-with-frame.jpg");
+    }
+  }
+    
+
+    /* Responsive styles for medium screens */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .card {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        margin: 20px auto;
+      }
+      .card__image1,
+    .card__image3,
+    .card__image4,
+    .card__image5,
+    .card__image6,.card__image {
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 200px;
+    }
+    .card__image{
+        background-image: url("/pics/cv.png");
+    }
+    .card__image1 {
+        background-image: url("/pics/pic01.jpg");
+    }
+
+    .card__image3 {
+        background-image: url("/pics/hand-holding-letter-5.jpg");
+    }
+
+    .card__image4 {
+        background-image: url("/pics/6864937_23324.jpg");
+    }
+
+    .card__image5 {
+        background-image: url("/pics/18493598_5994421.jpg");
+    }
+
+    .card__image6 {
+        background-image: url("/pics/decorative-table-with-frame.jpg");
+    }
+  
+    }
+    
+</style>
+</head>
+<body>
+    <div class="header">
+        <div class="p1">
+            <a href="http://thetechsafari.org"><h2>THE_TECHSAFARI</h2></a>
+        </div>
+        <div class="p2">
+            <div class="p3">
+                <a href="http://thetechsafari.org"><h2>activities</h2></a>
+            </div>
+            <div class="p4">
+                <a href="thetechsafariorg@gmail.com"><h2>contacts us</h2></a>
+            </div>
+        </div>
+        </div>
+    
+    <div class="second">
+        <h1 class="fancy">PAST EVENTS</h1>
+    </div>
+    <div class="cards">
+           <div class="card">
+      <div class="card__image6">
+        <div class="card__button">
+          <a href="/works/long desk design 9764bc5e01b742b7bbab7779559d4c36.html" target="_blank">MORE DETAILS</a>
+        </div>
+      </div>
+      <div class="card__content">
+        <h2>long desk design</h2>
+        <div class="comment">
+          
+          June 11, 2023 6:50 AM
+        </div>
+      </div>
+    </div>
+    <div class="card">
+        <div class="card__image3">
+          <div class="card__button">
+            <a href="/works/5th Member 43b2940f244c40689859f90b1cd0c315.html" target="_blank">MORE DETAILS</a>
+          </div>
+        </div>
+        <div class="card__content">
+          <h2>5th Member</h2>
+          <div class="comment">
+            
+            June 8, 2023 10:43 AM
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__image1">
+          <div class="card__button">
+            <a href="/works/THE TECHSAFARI Programs 4c513ef9e7f34231ae6866060af08f65.html" target="_blank">MORE DETAILS</a>
+          </div>
+        </div>
+        <div class="card__content">
+          <h2>THE TECH SAFARI PROGRAMS</h2>
+          <div class="comment">
+            
+            June 7, 2023 9:57 AM
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__image">
+          <div class="card__button">
+            <a href="/works/CV To-do List f3144687ee0146399b531f06dbfe7d44.html" target="_blank">MORE DETAILS</a>
+          </div>
+        </div>
+        <div class="card__content">
+          <h2>CV TO DO LIST</h2>
+          <div class="comment">
+            
+            June 1, 2023 10:52 AM
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__image4">
+          <div class="card__button">
+            <a href="/works/Tech Startup Vs Social Enterprise ae36edeb2f174462b8309470bcb6ee48.html" target="_blank">MORE DETAILS</a>
+          </div>
+        </div>
+        <div class="card__content">
+          <h2>Tech Startup Vs Social Enterprise</h2>
+          <div class="comment">
+            
+            March 13, 2023 2:45 PM
+          </div>
+        </div>
+      </div>
+     
+      <div class="card">
+        <div class="card__image5">
+          <div class="card__button">
+            <a href="/works/Bells systems, Operating model A 9cdf24528aef40b3a55d0779f8f6483c.html" target="_blank">MORE DETAILS</a>
+          </div>
+        </div>
+        <div class="card__content">
+          <h2>Bells systems, Operating model A</h2>
+          <div class="comment">
+            
+            February 23, 2023 6:53 AM
+          </div>
+        </div>
+      </div>
+
+     
+    
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var buttons = document.querySelectorAll('.card__button a');
+      buttons.forEach(function(button) {
+        button.addEventListener('click', function(event) {
+          event.stopPropagation();
+        });
+      });
+    });
+  </script>
+</body>
+</html>
