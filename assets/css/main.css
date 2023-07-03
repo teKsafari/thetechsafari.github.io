@@ -96,8 +96,8 @@ body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 
 body, input, select, textarea {
   color: rgba(255, 255, 255, 0.75);
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 15pt;
+  font-family: 'Gill Sans', 'Gill Sans MT', 'lucida grande', 'Calibri', 'Trebuchet MS', sans-serif;
+  /* font-family:'lucida grande', tahoma, verdana, arial, sans-serif;  fonts from obama.com*/  
   font-weight: 100;
   line-height: 1.75em;
 }
