@@ -2919,7 +2919,7 @@ body.landing #header {
 
 #banner:after {
   background-image: -moz-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
-  background-image: -webkit-linear-gradient(top, rgba(11, 27, 31, 0.92), rgba(27, 112, 130, 0.30)), url("images/overlay.png");;
+  background-image: -webkit-linear-gradient(top, rgba(11, 27, 31, 0.92), rgba(20, 12, 13, 0.70)), url("images/overlay.png");;
   background-image: -ms-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
   background-image: linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
   content: "";
@@ -2930,16 +2930,25 @@ body.landing #header {
   top: 0;
   width: 100%;
 }
+
 #banner .content {
   display: inline-block;
   margin-right: 1%;
   max-width: 95%;
   padding: 6em;
   position: relative;
-  text-align: right;
+  text-align: center;
   vertical-align: middle;
   z-index: 1;
+
 }
+
+#banner .image{
+  height: 100%;
+  width: 100%; 
+  margin-top: 3%;
+}
+
 #banner .content header {
   display: inline-block;
   vertical-align: middle;
