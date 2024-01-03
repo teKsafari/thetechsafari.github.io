@@ -3435,5 +3435,26 @@ body.is-touch #banner {
     padding: 0;
   }
 }
+/* text animation */
 
+#welcome-animation {
+  display: none;
+}
+
+#welcome-text {
+  font-size: 150%; text-align: center;
+}
+
+.split-char {
+  display: inline-block;
+}
+
+.w40px {
+  width: 10px;
+}
+
+.split-char:nth-of-type(254) {
+  height: 15px;
+  display: block;
+}
 /*# sourceMappingURL=main.css.map */

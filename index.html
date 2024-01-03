@@ -76,12 +76,10 @@
 					<div class="content">
 						<header>
 							
-							<p style="font-size: 150%; text-align: center;">
-								We are dedicated to delivering technical education to the underserved youth of 
-								remote Tanzania. As the name suggests-The TECHSAFARI, we traverse the country, reaching 
-								 one region after another, bridging the gap
-								 and expanding access to valuable knowledge. 
+							<p style="font-size: 150%; text-align: center;" id="welcome-text"> 
+								We are dedicated to delivering technical education to the underserved youth of remote Tanzania. As the name suggests-The TECHSAFARI, we traverse the country, reaching  one region after another, bridging the gap and expanding access to valuable knowledge. 
 							</p>
+							
 						</header>
 						<!-- <span class="image" ><img src="images/pic01.webp" alt=""></span> -->
 					</div>
@@ -244,6 +242,41 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+<!-- scripts -->
+<!-- index animation js welcome text -->
+			<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+			<script>
+				var text = $("#welcome-text").text();
+				var chars = text.split("");
+				$("#welcome-text").empty();
+				chars.forEach(function (char) {
+					if (char == " ") {
+						$("#welcome-text").append("<div class='split-char w40px'>" + char);
+					} else {
+						$("#welcome-text").append("<div class='split-char'>" + char);
+					}
+				});
+			
+				var splitChar = $(".split-char");
+			
+				function random(min, max) {
+					return (Math.random() * (max - min)) + min;
+				}
+			
+				splitChar.each(function (i) {
+					TweenMax.from($(this), 2.0, {
+						opacity: 0,
+						x: random(-500, 500),
+						y: random(-500, 500),
+						z: random(-500, 500),
+						scale: .1,
+						delay: i * .02,
+						yoyo: true,
+						repeat: 0
+					});
+				});
+			</script>
+		<!-- end welcome animation js -->
 	</body>
 </html>
