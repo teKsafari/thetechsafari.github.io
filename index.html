@@ -242,41 +242,10 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<!-- index animation js welcome text -->
+						<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+						<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+					<!-- end welcome animation js -->
 <!-- scripts -->
-<!-- index animation js welcome text -->
-			<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
-			<script>
-				$(document).ready(function () {
-				  var text = $("#welcome-text").text();
-				  var words = text.split(/\s+/);
-				  $("#welcome-text").empty();
-			  
-				  words.forEach(function (word, index) {
-					var space = index === words.length - 1 ? '' : ' ';
-					$("#welcome-text").append("<span class='word'>" + word + space + "</span>");
-				  });
-			  
-				  var splitWord = $(".word");
-			  
-				  function random(min, max) {
-					return (Math.random() * (max - min)) + min;
-				  }
-			  
-				  splitWord.each(function (i) {
-					TweenMax.from($(this), 2.0, {
-					  opacity: 0,
-					  x: random(-500, 500),
-					  y: random(-500, 500),
-					  z: random(-500, 500),
-					  scale: 0.1,
-					  delay: i * 0.02,
-					  yoyo: true,
-					  repeat: 0
-					});
-				  });
-				});
-			  </script>
-		<!-- end welcome animation js -->
 	</body>
 </html>

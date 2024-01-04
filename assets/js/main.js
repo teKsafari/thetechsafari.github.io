@@ -250,3 +250,34 @@
 })(jQuery);
 
 [...document.querySelectorAll(".accordition-container")].map(wrapper=>wrapper.onclick=()=>[...wrapper.children].map(el=>el.classList.toggle("active")));
+// aniamtion
+$(document).ready(function () {
+	var text = $("#welcome-text").text();
+	var words = text.split(/\s+/);
+	$("#welcome-text").empty();
+
+	words.forEach(function (word, index) {
+	  var space = index === words.length - 1 ? '' : ' ';
+	  $("#welcome-text").append("<span class='word'>" + word + space + "</span>");
+	});
+
+	var splitWord = $(".word");
+
+	function random(min, max) {
+	  return (Math.random() * (max - min)) + min;
+	}
+
+	splitWord.each(function (i) {
+	  TweenMax.from($(this), 2.0, {
+		opacity: 0,
+		x: random(-500, 500),
+		y: random(-500, 500),
+		z: random(-500, 500),
+		scale: 0.1,
+		delay: i * 0.02,
+		yoyo: true,
+		repeat: 0
+	  });
+	});
+  });
+  
