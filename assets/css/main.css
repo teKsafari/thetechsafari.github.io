@@ -3450,4 +3450,35 @@ body.is-touch #banner {
     margin-right: 5px;
     white-space: normal;
   }
+
+
+
+/* techsafari */
+#techSafariHeading {
+  font-size: 100px;
+  text-align: center;
+  padding-bottom: 60px;
+  font-family: 'Lato', sans-serif;
+  color: #04bce3;
+}
+
+@media only screen and (max-width: 600px) {
+  /* Adjust font size for small screens */
+  #techSafariHeading {
+      font-size: 50px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  /* Hide text for screens below 250px */
+  #techSafariHeading {
+      display: none;
+  }
+}
+
+
+
+
+
+
 /*# sourceMappingURL=main.css.map */
